@@ -6,6 +6,7 @@ class SimpsonsQuotes extends React.Component {
     this.state = {
       quote: "",
       character: "",
+      image: "",
       isLoading: true
     };
     this.getRandomQuote = this.getRandomQuote.bind(this);
@@ -39,24 +40,44 @@ class SimpsonsQuotes extends React.Component {
       "Bart Simpson"
     ];
 
+    const images = [
+      "https://frinkiac.com/img/S09E14/634333.jpg",
+      "https://frinkiac.com/img/S08E14/944342.jpg",
+      "https://frinkiac.com/img/S08E07/317516.jpg",
+      "https://frinkiac.com/img/S11E07/226760.jpg",
+      "https://frinkiac.com/img/S07E05/390923.jpg",
+      "https://frinkiac.com/img/S07E12/147914.jpg",
+      "https://frinkiac.com/img/S06E01/925441.jpg",
+      "https://frinkiac.com/img/S08E20/716982.jpg",
+      "https://frinkiac.com/img/S04E12/771404.jpg",
+      "https://frinkiac.com/img/S06E07/912845.jpg"
+    ];
+
     const randomNum = Math.floor(Math.random() * quotes.length);
     const randomQuote = quotes[randomNum];
     const randomCharacter = characters[randomNum];
+    const randomImage = images[randomNum];
 
     this.setState({
       quote: randomQuote,
       character: randomCharacter,
+      image: randomImage,
       isLoading: false
     });
   }
 
   componentDidMount() {
+    console.log("component mounted!");
     this.getRandomQuote();
   }
 
   tweetQuote() {}
 
   render() {
+    let tweetURL =
+      "https://twitter.com/intent/tweet?" +
+      "hashtags=quotes&related=freecodecamp&text=" +
+      encodeURIComponent('"' + this.state.quote + '" -' + this.state.character);
     if (this.state.isLoading) {
       return (
         <img src="https://66.media.tumblr.com/55c0c0c46dc12c76ce5128ee409147ca/tumblr_mopiw6K8ab1rgh9l8o1_500.gif" />
@@ -65,10 +86,14 @@ class SimpsonsQuotes extends React.Component {
       return (
         <div>
           <h1>{this.state.quote}</h1>
-
           <h2>{this.state.character}</h2>
+          <img src={this.state.image} />
           <button onClick={this.getRandomQuote}>Get Simpsons Quote</button>
-          <button onClick={this.tweetQuote}>Tweet Quote</button>
+          <button>
+            <a id="tweetButton" href={tweetURL} target="_blank">
+              Tweet Quote
+            </a>
+          </button>
         </div>
       );
     }

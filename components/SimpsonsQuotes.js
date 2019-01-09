@@ -10,7 +10,6 @@ class SimpsonsQuotes extends React.Component {
       isLoading: true
     };
     this.getRandomQuote = this.getRandomQuote.bind(this);
-    this.tweetQuote = this.tweetQuote.bind(this);
   }
 
   getRandomQuote() {
@@ -71,8 +70,6 @@ class SimpsonsQuotes extends React.Component {
     this.getRandomQuote();
   }
 
-  tweetQuote() {}
-
   render() {
     let tweetURL =
       "https://twitter.com/intent/tweet?" +
@@ -84,13 +81,16 @@ class SimpsonsQuotes extends React.Component {
       );
     } else {
       return (
-        <div>
-          <h1>{this.state.quote}</h1>
-          <h2>{this.state.character}</h2>
-          <img src={this.state.image} />
-          <button onClick={this.getRandomQuote}>Get Simpsons Quote</button>
-          <button>
-            <a id="tweetButton" href={tweetURL} target="_blank">
+        <div className="quoteMachine">
+          <img className="simpsonsImage" src={this.state.image} />
+          <h2 className="simpsonsQuote">{this.state.quote}</h2>
+          <p className="simpsonsCharacter">{this.state.character}</p>
+          <button className="quoteButton" onClick={this.getRandomQuote}>
+            Get Simpsons Quote
+          </button>
+
+          <button className="tweetButton">
+            <a className="tweetLink" href={tweetURL} target="_blank">
               Tweet Quote
             </a>
           </button>

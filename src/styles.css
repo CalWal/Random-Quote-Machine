@@ -2,3 +2,95 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.quoteMachine {
+  background: #1e2430;
+  padding-bottom: 50px;
+}
+
+.simpsonsImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.simpsonsQuote {
+  text-align: center;
+  color: #ffd90f;
+  font-family: "Open Sans", sans-serif;
+}
+
+.simpsonsCharacter {
+  text-align: center;
+  color: #ffd90f;
+  font-family: "Open Sans", sans-serif;
+}
+
+.quoteButton {
+  width: 255px;
+  height: 55px;
+  text-align: center;
+  line-height: 1.1em;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 0px;
+  min-width: 120px;
+  background: #ffd90f;
+  border: 2px solid black;
+  margin: auto;
+  display: block;
+}
+
+.quoteButton:hover {
+  background: #1e2430;
+  color: #ffd90f;
+  border-color: #ffd90f;
+}
+
+.quoteButton:focus {
+  outline: 0;
+}
+
+.tweetButton {
+  width: 255px;
+  height: 55px;
+  text-align: center;
+  line-height: 1.1em;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 0px;
+  min-width: 120px;
+  background: #ffd90f;
+  border: 2px solid black;
+  margin: auto;
+  display: block;
+}
+
+.tweetButton:hover {
+  background: #1e2430;
+  color: #ffd90f;
+  border-color: #ffd90f;
+}
+
+.tweetButton:focus {
+  outline: 0;
+}
+
+.tweetLink:hover {
+  text-decoration: none;
+  color: #ffd90f;
+}
+
+.tweetButton a {
+  text-decoration: none;
+  color: black;
+}

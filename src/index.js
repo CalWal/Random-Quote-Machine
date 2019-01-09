@@ -8,7 +8,12 @@ import SimpsonsQuotes from "/components/SimpsonsQuotes";
 import SimpsonsData from "/data/SimpsonsData";
 
 function App() {
-  return <SimpsonsQuotes />;
+  return (
+    <div>
+      <Header />
+      <SimpsonsQuotes />;
+    </div>
+  );
 }
 
 const rootElement = document.getElementById("root");

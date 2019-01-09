@@ -7,7 +7,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <p>The Simpsons Quote Generator!</p>
+        <p className="headerText">The Simpsons Quote Generator!</p>
       </header>
     );
   }

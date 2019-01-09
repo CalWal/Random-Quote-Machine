@@ -86,12 +86,12 @@ class SimpsonsQuotes extends React.Component {
           <h2 className="simpsonsQuote">{this.state.quote}</h2>
           <p className="simpsonsCharacter">{this.state.character}</p>
           <button className="quoteButton" onClick={this.getRandomQuote}>
-            Get Simpsons Quote
+            More Simpsons Quotes
           </button>
 
           <button className="tweetButton">
             <a className="tweetLink" href={tweetURL} target="_blank">
-              Tweet Quote
+              Share On Twitter
             </a>
           </button>
         </div>

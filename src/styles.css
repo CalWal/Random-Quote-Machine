@@ -9,6 +9,10 @@ header {
   background: #ffd90f; /* fallback for old browsers */
 }
 
+body {
+  background: #1e2430;
+}
+
 .headerText {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bolder;
